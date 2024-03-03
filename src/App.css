@@ -1,0 +1,112 @@
+.app-container {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid grey; */
+  margin: 20px;
+  padding: 15px 20px;
+  gap: 15px;
+}
+
+.app-container .app-item {
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  flex-grow: 1;
+  padding: 0 25px;
+}
+
+.app-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app-item ul li.product-item {
+  padding: 5px 0;
+}
+
+.app-item .product-content-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 5px;
+}
+
+.app-item .product-content-wrapper:hover {
+  background: #fcfcfc;
+}
+
+.app-item .product-content {
+  
+}
+
+.app-item .product-content > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  color: grey;
+  padding: 2px 0;
+}
+
+.app-item .product-content > div > span:nth-child(2) {
+  font-weight: bold;
+}
+
+.product-action {
+  border-top: 1px solid #e9e9e9;
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  text-align: right;
+}
+
+.btn {
+  padding: 3px 7px;
+  background: white;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.btn.btn-danger {
+  background: #f14f4f;
+  color: white;
+}
+
+.btn.btn-primary {
+  background: #1e86cf;
+  color: white;
+}
+
+.product-qty {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-qty .product-qty-value {
+  border: 1px solid grey;
+  padding: 0 10px;
+}
+
+.product-qty .product-qty-minus,
+.product-qty .product-qty-add {
+  /* padding: 0 5px; */
+  cursor: pointer;
+  /* border: 1px solid grey; */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  /* background: #f4f3f3; */
+  user-select: none;
+}
+
+.product-qty .product-qty-minus:hover,
+.product-qty .product-qty-add:hover {
+  background: #f4f3f3;
+}

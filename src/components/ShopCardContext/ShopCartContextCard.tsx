@@ -1,9 +1,17 @@
+import { useContext, useRef } from "react";
 import ShopCartContextItem from "./ShopCartContextItem";
+import { ShopChartContext } from "../../store/context/shopContext";
 
 const ShopCartContextCard = () => {
-  const items: any = []
+  const h2Ref = useRef<HTMLHeadingElement | null>(null)
+  const {items, addCartItem} = useContext(ShopChartContext)
   const handleAddCartItem = () => {
-    // 
+    const productId = Date.now()
+    addCartItem({
+      productId: productId,
+      product: `Product ${productId}`,
+      price: +((Math.random() * 1000) + 100).toFixed(2)
+    })
   };
 
   return (

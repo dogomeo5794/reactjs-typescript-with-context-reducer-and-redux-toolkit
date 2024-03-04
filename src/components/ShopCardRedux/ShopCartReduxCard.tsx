@@ -1,9 +1,17 @@
+import { useShopCartDispatch, useShopCartSelector } from "../../lib/hooks";
+import { addItem } from "../../store/redux/modules/shopCartSlice";
 import ShopCartReduxItem from "./ShopCartReduxItem";
 
 const ShopCartReduxCard = () => {
-  const shopCartItems: any = [];
+  const shopCartItems = useShopCartSelector(state => state.cart.items)
+  const dispatch = useShopCartDispatch();
   const handleAddCartItem = () => {
-    // 
+    const productId = Date.now()
+    dispatch(addItem({
+      productId: productId,
+      product: `Product ${productId}`,
+      price: +((Math.random() * 1000) + 100).toFixed(2)
+    }))
   };
 
   return (

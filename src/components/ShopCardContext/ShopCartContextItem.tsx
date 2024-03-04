@@ -1,18 +1,16 @@
-import React, { useContext } from "react";
-import { ShopCartContext, ShopCartData } from "../../store/context/shopCartContext";
+import React from "react";
 
-const ShopCartContextItem: React.FC<{ product: ShopCartData }> = ({ product }) => {
-  const {addQuantity, minusQuantity, removeCartItem} = useContext(ShopCartContext)
+const ShopCartContextItem: React.FC<{ product: any }> = ({ product }) => {
   const handleAddQuantity = (e: React.MouseEvent<HTMLSpanElement>) => {
-    addQuantity(product)
+    // 
   }
 
   const handleMinusQuantity = (e: React.MouseEvent<HTMLSpanElement>) => {
-    minusQuantity(product)
+    // 
   }
 
   const handleRemoveCartItem = (e: React.MouseEvent<HTMLSpanElement>) => {
-    removeCartItem(product)
+    // 
   }
 
   return (

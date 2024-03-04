@@ -1,20 +1,16 @@
 import React from "react";
-import { ShopCartReduxData, addQuantity, minusQuantity, removeCartItem } from "../../store/redux/modules/shopCartSlice";
-import { useShopCartDispatch } from "../../lib/hooks";
-// import { useDispatch } from "react-redux";
 
-const ShopCartReduxItem: React.FC<{ product: ShopCartReduxData }> = ({ product }) => {
-  const shopCartDispatch = useShopCartDispatch();
+const ShopCartReduxItem: React.FC<{ product: any }> = ({ product }) => {
   const handleAddQuantity = (e: React.MouseEvent<HTMLSpanElement>) => {
-    shopCartDispatch(addQuantity(product))
+    // 
   }
 
   const handleMinusQuantity = (e: React.MouseEvent<HTMLSpanElement>) => {
-    shopCartDispatch(minusQuantity(product))
+    // 
   }
 
   const handleRemoveCartItem = (e: React.MouseEvent<HTMLSpanElement>) => {
-    shopCartDispatch(removeCartItem(product))
+    // 
   }
 
   return (

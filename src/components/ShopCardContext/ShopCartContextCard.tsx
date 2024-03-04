@@ -3,7 +3,6 @@ import ShopCartContextItem from "./ShopCartContextItem";
 import { ShopChartContext } from "../../store/context/shopContext";
 
 const ShopCartContextCard = () => {
-  const h2Ref = useRef<HTMLHeadingElement | null>(null)
   const {items, addCartItem} = useContext(ShopChartContext)
   const handleAddCartItem = () => {
     const productId = Date.now()
